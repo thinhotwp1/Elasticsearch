@@ -6,15 +6,14 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "customer")
+@Document(indexName = "k8s")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+public class K8SLog {
     @Id
     private String id;
-    private String firstName;
-    private String lastName;
-    private Integer age;
-
+    private String log;
+    private String nameService;
+    private String type;
 }
